@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="trajectory-dao" />
+        <module name="trajectory-model" />
+        <module name="trajectory-service" />
+        <module name="trajectory-util" />
+        <module name="trajectory-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="trajectory" target="1.5" />
+      <module name="trajectory-dao" target="1.5" />
+      <module name="trajectory-model" target="1.5" />
+      <module name="trajectory-service" target="1.5" />
+      <module name="trajectory-util" target="1.5" />
+      <module name="trajectory-web" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

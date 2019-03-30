@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lnu.trajectory.dao.PointDao">
+
+    <!--<select id="findByPage" resultType="rockdata">
+        select * from rockdata
+        <if test="start!=null and size!=null">
+            limit #{start},#{size}
+        </if>
+    </select>
+
+    &lt;!&ndash; 查询用户记录总数 &ndash;&gt;
+    <select id="selectCount" resultType="int">
+        select count(*) from rockdata
+    </select>
+
+    <insert id="addRockData" useGeneratedKeys="true" keyProperty="id">
+        insert into rockdata (x1,x2,x3,e1,e2,e3,eV,ptime)
+        values(#{x1},#{x2},#{x3},#{e1},#{e2},#{e3},#{eV},#{ptime})
+
+    </insert>
+
+    <delete id="deleteRockData" parameterType="java.util.List">
+
+        delete from rockdata where id in
+        <foreach collection="ids" item="id" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+
+    </delete>
+
+    <select id="getRockDataById" parameterType="int" resultType="rockdata">
+        SELECT * FROM  rockdata where id = #{id}
+    </select>
+
+    <update id="updateRockData">
+        update rockdata
+        set x1 = #{x1},x2=#{x2},x3=#{x3},e1=#{e1},e2=#{e2},e3=#{e3},ev=#{eV},ptime=#{ptime}
+        where id = #{id}
+    </update>
+
+    <insert id="batchAddRockData" parameterType="java.util.List">
+        insert into rockdata (x1,x2,x3,e1,e2,e3,eV,ptime)
+        values
+        <foreach collection="datas" item="rockdata" separator=",">
+            (#{rockdata.x1},#{rockdata.x2},#{rockdata.x3},#{rockdata.e1},#{rockdata.e2},#{rockdata.e3},#{rockdata.eV},#{rockdata.ptime})
+        </foreach>
+    </insert>-->
+
+
+    <insert id="batchInsertPoints" parameterType="java.util.List">
+        insert into tb_data (uid,latitude,longtitude,altitude,sdate,stime)
+        values
+        <foreach collection="points" item="point" separator=",">
+            (#{point.uid},#{point.latitude},#{point.longitude},#{point.altitude},#{point.date},#{point.time})
+        </foreach>
+    </insert>
+    
+    <select id="getDatasById" resultType="pointvo">
+
+        select latitude,longtitude from tb_data
+        where uid=#{uid}
+
+    </select>
+
+    <select id="getPointOndDay" resultType="pointvo">
+
+        select latitude,longtitude ,stime from tb_data
+        where uid=#{uid} and sdate=#{sdate}
+
+    </select>
+</mapper>

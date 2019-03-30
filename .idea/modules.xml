@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/trajectory.iml" filepath="$PROJECT_DIR$/trajectory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trajectory-dao/trajectory-dao.iml" filepath="$PROJECT_DIR$/trajectory-dao/trajectory-dao.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trajectory-model/trajectory-model.iml" filepath="$PROJECT_DIR$/trajectory-model/trajectory-model.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trajectory-service/trajectory-service.iml" filepath="$PROJECT_DIR$/trajectory-service/trajectory-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trajectory-util/trajectory-util.iml" filepath="$PROJECT_DIR$/trajectory-util/trajectory-util.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trajectory-web/trajectory-web.iml" filepath="$PROJECT_DIR$/trajectory-web/trajectory-web.iml" />
+    </modules>
+  </component>
+</project>

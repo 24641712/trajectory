@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="trajectory-web:war">
+    <output-path>$PROJECT_DIR$/trajectory-web/target</output-path>
+    <root id="archive" name="trajectory-web.war">
+      <element id="artifact" artifact-name="trajectory-web:war exploded" />
+    </root>
+  </artifact>
+</component>

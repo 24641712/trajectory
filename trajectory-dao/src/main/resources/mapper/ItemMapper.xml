@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.lnu.trajectory.dao.ItemDao">
+   <select id="getAllItem" resultType="item">
+    SELECT * FROM paper.tb_actitem order by uid;
+   </select>
+
+    <select id="getAllItemByUid" resultType="java.lang.String">
+        SELECT sem FROM tb_actitem where uid=#{uid}
+    </select>
+</mapper>
